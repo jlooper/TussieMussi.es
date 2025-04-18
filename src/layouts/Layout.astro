@@ -1,0 +1,55 @@
+---
+import Navigation from "../components/Navigation.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Create flower bouquets, or 'tussie mussies', using the language of flowers, or 'floriography'"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="bg-purple-600">
+      <Navigation />
+    </header>
+    <slot />
+    <footer class="bg-purple-600 p-10 m-10 border-t">
+      <div class="container p-4">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center m-10"
+        >
+          <p class="text-white text-md m-10">
+            © {new Date().getFullYear()} Flower Language Bouquet Generator. Proudly
+            built in Boston. A project of Jen Looper via <a
+              href="https://beanpot.studio"
+              class="text-white underline">Beanpot Studio</a
+            >.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  a {
+    text-decoration: underline;
+  }
+</style>

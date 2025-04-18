@@ -1,0 +1,109 @@
+---
+import Layout from "../layouts/Layout.astro";
+import victoria from "../assets/victoria.avif?url";
+---
+
+<Layout title="About | Flower Language Bouquet Generator">
+  <main class="min-h-screen bg-gradient-to-b from-pink-50 to-purple-50">
+    <div class="container mx-auto px-4 py-8">
+      <header class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold text-purple-800 mb-4">
+          About the Language of Flowers
+        </h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Understanding the historical significance and meaning behind floral
+          communication.
+        </p>
+      </header>
+
+      <div class="max-w-4xl p-6 mx-auto bg-white rounded-lg shadow-md">
+        <div class="prose prose-purple max-w-none">
+          <p class="p-4">
+            Floriography, or the language of flowers, is a means of
+            cryptological communication through the use or arrangement of
+            flowers. Dating back to the Victorian era, this practice allowed
+            people to express feelings which otherwise could not be spoken.
+          </p>
+
+          <div class="my-8 flex justify-center">
+            <img
+              src={victoria}
+              alt="Queen Victoria with a Tussie Mussie"
+              class="rounded-lg shadow-md"
+              height="600"
+              width="600"
+            />
+          </div>
+          <p class="text-sm text-gray-500 p-2 text-center">
+            Queen Victoria popularized tussie mussies. Image from the Royal
+            Collection Trust
+          </p>
+
+          <h2 class="text-2xl p-8 m-4">Cultural Significance</h2>
+          <p class="p-4">
+            The language of flowers varies across different cultures and time
+            periods. In Victorian England, elaborate flower dictionaries were
+            published, allowing people to create bouquets that conveyed specific
+            messages.
+          </p>
+
+          <h2 class="text-2xl p-8 m-4">Data</h2>
+          <p class="p-4">
+            This data was taken from the <a
+              class="text-purple-600 underline"
+              href="https://www.almanac.com/flower-meanings-language-flowers#flower-meanings"
+            >
+              Farmer's Almanac</a
+            >, and generally corresponds to the English-speaking Victorian
+            understanding of 'floriography', or the secret meanings of flowers.
+            Messages could be transmitted by sending just the right combination
+            of flowers in a bouquet or 'tussie mussie'. Note, there are many of
+            these types of lists; the canonical one was the French book, "Le
+            Langage des Fleurs" by "Madame Charlotte de la Tour", written in
+            1809. This book was translated and reinnterpreted several times in
+            the Victorian era, triggering a fashion for these meaningful
+            bouquets. <a
+              class="text-purple-600 underline"
+              href="https://en.wikipedia.org/wiki/Language_of_flowers">Source</a
+            >
+          </p>
+
+          <h2 class="text-2xl p-8 m-4">Creating Meaningful Bouquets</h2>
+          <p class="p-4">
+            When creating a bouquet using the language of flowers, consider not
+            only the meaning of each individual flower but also how they
+            complement each other. A thoughtfully composed arrangement can tell
+            a story or express complex emotions. The color of a given flower,
+            like a rose, carnation, or tulip, can change its meaning.
+          </p>
+
+          <h2 class="text-2xl p-8 m-4">Modern Interpretations</h2>
+          <p class="p-4">
+            Today, while we may not rely on flowers to communicate secret
+            messages, understanding the traditional meanings can add depth and
+            thoughtfulness to gift-giving and special occasions. Our bouquet
+            creator helps you craft arrangements with intention and meaning and
+            send them as e-cards. It's a great gift for a birthday or Mother's
+            Day, or really any occasion. You could also use this generator to
+            create a meaningful bouquet using real flowers.
+          </p>
+
+          <div class="mt-8 p-4 bg-purple-50 rounded-lg">
+            <p class="italic text-center">
+              "The Earth laughs in flowers." — Ralph Waldo Emerson
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-8 text-center">
+          <a
+            href="/"
+            class="inline-block p-4 m-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors duration-200"
+          >
+            Create Your Bouquet
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
