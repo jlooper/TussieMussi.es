@@ -19,7 +19,8 @@ A tussie-mussie is a small bouquet traditionally used to convey coded sentiments
 
 ## Demo
 
-<video src="https://res.cloudinary.com/front-end-foxes/video/upload/v1745022335/flower-movie_jmjuql.mov" controls width="600"></video>
+
+[![Watch a demo](./tm.png)](https://res.cloudinary.com/front-end-foxes/video/upload/v1745022335/flower-movie_jmjuql.mov)
 
 ## 🛠 Tech Stack
 
