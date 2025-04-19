@@ -284,7 +284,7 @@ export default {
 
         try {
           const result = await mg.messages.create(import.meta.env.PUBLIC_MAILGUN_DOMAIN, {
-            from: `BouquAI Florist <postmaster@${import.meta.env.PUBLIC_MAILGUN_DOMAIN}>`,
+            from: `Flora <postmaster@${import.meta.env.PUBLIC_MAILGUN_DOMAIN}>`,
             to: [to.value],
             subject: `Your Tussie Mussie from ${from.value}`,
             text: personalMessage.value || "Sending you this beautiful bouquet to brighten your day!",
