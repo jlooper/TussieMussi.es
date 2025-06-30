@@ -4,7 +4,7 @@
   >
     <div class="h-48 overflow-hidden">
       <img
-        :src="flower.image"
+        :src="`https://res.cloudinary.com/${cloudName}/image/upload/flowers/${flower.image}`"
         :alt="flower.name"
         class="w-full h-full object-cover"
       />
@@ -27,22 +27,22 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "FlowerCard",
-  props: {
-    flower: {
-      type: Object,
-      required: true,
-    },
-    onAddToBouquet: {
-      type: Function,
-      required: true,
-    },
-    isInBouquet: {
-      type: Boolean,
-      required: true,
-    },
+<script setup>
+
+const props = defineProps({
+  flower: {
+    type: Object,
+    required: true,
   },
-};
+  onAddToBouquet: {
+    type: Function,
+    required: true,
+  },
+  isInBouquet: {
+    type: Boolean,
+    required: true,
+  },
+});
+
+const cloudName = import.meta.env.PUBLIC_CLOUDINARY_CLOUD_NAME;
 </script>

@@ -90,7 +90,7 @@
           >
             <div class="w-6 h-6 rounded-full overflow-hidden mr-2">
               <img
-                :src="flower.image"
+                :src="`https://res.cloudinary.com/${cloudName}/image/upload/flowers/${flower.image}`"
                 :alt="flower.name"
                 class="w-full h-full object-cover"
               />
@@ -128,6 +128,7 @@ export default {
     const matchedFlowers = ref([]);
     const isGenerating = ref(false);
     const error = ref("");
+    const cloudName = import.meta.env.PUBLIC_CLOUDINARY_CLOUD_NAME;
 
     const sentimentKeywords = reactive({
       love: ["love", "passion", "affection", "adoration", "heart"],
@@ -210,6 +211,7 @@ export default {
       updateCustomMeaning,
       clearSelectedSentiment,
       findMatchingFlowers,
+      cloudName,
     };
   },
 };

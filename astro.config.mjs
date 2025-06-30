@@ -11,6 +11,7 @@ export default defineConfig({
       STABILITY_API_KEY: envField.string({ context: "client", access: "public" }),
       CLOUDINARY_API_URL: envField.string({ context: "client", access: "public" }),
       CLOUDINARY_PRESET: envField.string({ context: "client", access: "public" }),
+      PUBLIC_CLOUDINARY_CLOUD_NAME: envField.string({ context: "client", access: "public" }),
     }
   }
 });

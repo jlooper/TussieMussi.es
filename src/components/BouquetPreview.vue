@@ -28,7 +28,7 @@
             <div class="flex items-center">
               <div class="w-8 h-8 rounded-full overflow-hidden mr-2">
                 <img
-                  :src="flower.image"
+                  :src="`https://res.cloudinary.com/${cloudName}/image/upload/flowers/${flower.image}`"
                   :alt="flower.name"
                   class="w-full h-full object-cover"
                 />
@@ -195,6 +195,8 @@ export default {
       props.selectedFlowers.map((f) => f.meaning).join(". ")
     );
 
+    const cloudName = import.meta.env.PUBLIC_CLOUDINARY_CLOUD_NAME;
+
     watch(
       () => props.selectedFlowers,
       () => {
@@ -345,6 +347,7 @@ export default {
       to,
       shareECard,
       from,
+      cloudName,
     };
   },
 };
