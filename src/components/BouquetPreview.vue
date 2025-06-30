@@ -28,7 +28,7 @@
             <div class="flex items-center">
               <div class="w-8 h-8 rounded-full overflow-hidden mr-2">
                 <img
-                  :src="`https://res.cloudinary.com/${cloudName}/image/upload/flowers/${flower.image}`"
+                  :src="`https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/flowers/${flower.image}`"
                   :alt="flower.name"
                   class="w-full h-full object-cover"
                 />
