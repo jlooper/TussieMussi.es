@@ -1,5 +1,4 @@
 
-import { STABILITY_API_URL } from "astro:env/client";
 import { STABILITY_API_KEY } from "astro:env/client";
 
 // Function to generate a bouquet image using Stability AI
@@ -9,12 +8,12 @@ import { STABILITY_API_KEY } from "astro:env/client";
 export async function generateBouquetImage(flowers: string[]): Promise<string | null> {
   
   
-  if (!STABILITY_API_KEY || !STABILITY_API_URL) {
+  if (!STABILITY_API_KEY) {
     console.error('API key or URL not found. Make sure you have:',
       '\n1. Created a .env file in your project root',
-      '\n2. Added VITE_STABILITY_API_URL and VITE_STABILITY_API_KEY',
+      '\n2. Added STABILITY_API_KEY',
       '\n3. Restarted your development server');
-    throw new Error('Missing Stability AI API key or URL. Please check your .env file.');
+    throw new Error('Missing Stability AI API key. Please check your .env file.');
   }
 
   const prompt = `A beautiful professional photograph of a miniature hand-held flower bouquet containing only one of each of the following flowers: ${flowers.join(", ")}, 
@@ -22,7 +21,7 @@ export async function generateBouquetImage(flowers: string[]): Promise<string | 
 
   try {
     
-    const response = await fetch(STABILITY_API_URL, {
+    const response = await fetch(`https://api.stability.ai/v1/generation/stable-diffusion-xl-1024-v1-0/text-to-image`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

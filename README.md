@@ -42,7 +42,6 @@ CLOUDINARY_API_SECRET=your_cloudinary_api_secret
 CLOUDINARY_API_URL=your_cloudinary_api_url
 CLOUDINARY_PRESET=your_cloudinary_preset
 
-STABILITY_API_URL=your_chosen_stability_url
 STABILITY_API_KEY=your_stability_api_key
 
 PUBLIC_MAILGUN_API_KEY=your_mailgun_api_key
