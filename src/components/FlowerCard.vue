@@ -4,7 +4,7 @@
   >
     <div class="h-48 overflow-hidden">
       <img
-        :src="`https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/flowers/${flower.image}`"
+        :src="`https://res.cloudinary.com/${cloudName}/image/upload/w_250/f_auto,q_auto/flowers/${flower.image}`"
         :alt="flower.name"
         class="w-full h-full object-cover"
       />
